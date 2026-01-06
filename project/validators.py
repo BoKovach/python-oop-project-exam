@@ -8,3 +8,9 @@ class Validators:
     def check_price(price, message):
         if price <= 0.0:
             raise ValueError(message)
+
+    @staticmethod
+    def check_capacity(capacity, message):
+        if capacity <= 0:
+            raise ValueError(message)
+
