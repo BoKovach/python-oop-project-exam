@@ -14,8 +14,8 @@ class BaseRobot(ABC):
 
     @name.setter
     def name(self, value):
-        if not Validators.check_name_and_kind(value, "Robot name cannot be empty!"):
-            self._name = value
+        Validators.check_name_and_kind(value, "Robot name cannot be empty!")
+        self._name = value
 
     @property
     def kind(self):
@@ -23,8 +23,8 @@ class BaseRobot(ABC):
 
     @kind.setter
     def kind(self, value):
-        if not Validators.check_name_and_kind(value, "Robot kind cannot be empty!"):
-            self._kind = value
+        Validators.check_name_and_kind(value, "Robot kind cannot be empty!")
+        self._kind = value
 
     @property
     def price(self):
@@ -32,12 +32,10 @@ class BaseRobot(ABC):
 
     @price.setter
     def price(self, value):
-        if not Validators.check_price(value, "Robot price cannot be less than or equal to 0.0!"):
-            self._price = value
+        Validators.check_price(value, "Robot price cannot be less than or equal to 0.0!")
+        self._price = value
 
     @abstractmethod
     def eating(self):
         pass
-
-
 

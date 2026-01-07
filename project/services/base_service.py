@@ -5,6 +5,7 @@ class BaseService(ABC):
     def __init__(self, name: str, capacity: int):
         self.capacity = capacity
         self.name = name
+        self.robots = []
 
     @property
     def name(self):
@@ -12,8 +13,8 @@ class BaseService(ABC):
 
     @name.setter
     def name(self, value):
-        if not Validators.check_name_and_kind(value, "Service name cannot be empty!"):
-            self._name = value
+        Validators.check_name_and_kind(value, "Service name cannot be empty!")
+        self._name = value
 
     @property
     def capacity(self):
@@ -21,8 +22,8 @@ class BaseService(ABC):
 
     @capacity.setter
     def capacity(self, value):
-        if Validators.check_capacity(value, "Service capacity cannot be less than or equal to 0!"):
-            self._capacity = value
+        Validators.check_capacity(value, "Service capacity cannot be less than or equal to 0!")
+        self._capacity = value
 
     @abstractmethod
     def details(self):
