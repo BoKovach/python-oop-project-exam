@@ -1,16 +1,4 @@
-from project.robots_managing_app import RobotsManagingApp
-#
-# main_app = RobotsManagingApp()
-#
-# print(main_app.add_service('MainService', 'Lalala'))
-# print(main_app.add_service('SecondaryService', 'Lololo'))
-#
-# print(main_app.add_robot('MaleRobot', 'Bo', 'Iron', 9999.99))
-# print(main_app.add_robot('FemaleRobot', 'Yaa', 'Iron', 9999.99))
-# print(main_app.robots)
-# print(main_app.add_robot_to_service('Bo', 'Lalala'))
-# print(main_app.robots)
-# print(main_app.add_robot_to_service('Yaa', 'Lololo'))
+from robots_managing_app import RobotsManagingApp
 
 main_app = RobotsManagingApp()
 print(main_app.add_service('SecondaryService', 'ServiceRobotsWorld'))
